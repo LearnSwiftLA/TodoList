@@ -1,1 +1,1 @@
-Frontend module
+Client module
