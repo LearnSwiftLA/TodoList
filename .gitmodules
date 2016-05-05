@@ -2,3 +2,7 @@
 	path = Common
 	url = git@github.com:LearnSwiftLA/TodoList.git
 	branch = common
+[submodule "Backend"]
+	path = Backend
+	url = git@github.com:LearnSwiftLA/TodoList.git
+	branch = backend
