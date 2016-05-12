@@ -6,8 +6,6 @@
 //
 //
 
-import Foundation
-
 public struct Todo {
     public let title: String
     public let listID: Int
@@ -23,6 +21,6 @@ public struct Todo {
 public extension Todo {
 
     static func dummies() -> [Todo] {
-        return ["Run", "Walk", "Sleep", "Die", "Learn", "Eat"].enumerated().map { Todo(title: $1, listID: $0 % 4, done: Bool($0 % 2)) }
+        return ["Run", "Walk", "Sleep", "Die", "Learn", "Eat"].enumerated().map { Todo(title: $1, listID: $0 % 4, done: $0 % 2 == 0) }
     }
 }

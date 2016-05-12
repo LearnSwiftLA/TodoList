@@ -2,7 +2,7 @@
 import Kitura
 import KituraNet
 import KituraSys
-import Common
+import Data
 import SwiftyJSON
 
 let router = Router()
@@ -18,9 +18,9 @@ router.get("/list/:index") { request, response, _ in
 
         try! response.status(.OK).send(json: JSON(dummies)).end()
     } else {
-        response.status(.BAD_REQUEST)
+        response.status(.badRequest)
     }
 }
 
-HttpServer.listen(port: 8090, delegate: router)
+HTTPServer.listen(port: 8090, delegate: router)
 Server.run()
